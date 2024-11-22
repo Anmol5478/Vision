@@ -55,8 +55,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone git@github.com:everthingisnotfound/ArjunSaxena_Portfolio.git
-cd ArjunSaxena_Portfolio
+git clone git@github.com:Anmol5478/Vision.git
+cd Vision
 ```
 
 **Installation**
