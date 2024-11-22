@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import './sidebar.css';
+import moon from '../../assets/moon-outline.svg'
 import { assets } from '../../assets/assets';
 import { Context } from '../../context/context';
 
@@ -10,18 +11,33 @@ const Sidebar = () => {
         setRecentPrompt(prompt),
         await onSent(prompt)
     }
+
+    const {darkMode,setDarkMode}=useState(false)
+    const toggleDarkMode = () => {
+        setDarkMode((prev) => !prev);
+        document.body.classList.toggle('dark-mode'); // Add or remove the class on the body
+    };
     return (
         <div className="sidebar">
             <div className="top">
+                <div className="top-icon">
+
                 <img
                     className="menu"
                     onClick={() => setExtended((prev) => !prev)} // Toggle extended state
                     src={assets.menu_icon}
                     alt=""
                 />
+                <div className='Dark-mode dark-mode'>
+
+                    <ion-icon name="moon-outline"><img onClick={()=>setDarkMode(true)} src={moon} alt="Dark Mode Toggle" />
+                    </ion-icon>
+                    {extended ? <p>Dark Mode</p> : null}
+                </div>
+                </div>
                 <div onClick={()=>newChat()} className="new-chat">
                     <img src={assets.plus_icon} alt="" />
-                    {extended ? <p>New chat</p> : null}
+                    {extended ? <p>New Chat</p> : null}
                 </div>
                 {extended ? (
                     <div className="recent">

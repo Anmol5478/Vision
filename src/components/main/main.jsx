@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import "./main.css"
+import logo from '../../assets/vision-logo.png'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/context'
 
@@ -43,7 +44,7 @@ const main = () => {
               <p >{recentPrompt}</p>
             </div>
             <div className="result-data">
-              <img src={assets.gemini_icon} alt="" />
+              <img src={logo} alt="" />
               {loading?
               <div className="loader">
                 <hr />
