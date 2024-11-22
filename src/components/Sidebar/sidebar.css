@@ -13,13 +13,13 @@
 .sidebar img{
     width: 20px;
 }
-.sidebar .menu{
+/* .sidebar .menu{
     display: block;
     margin-left: 12px;
     cursor: pointer;
-}
+} */
 .sidebar .new-chat{
-    margin-top: 40px;
+    margin-top: 30px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -91,12 +91,43 @@
     color: grey;
     cursor: pointer;
 }
+/* Default Light Mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
-.dark-mode img {
+
+.sidebar {
+    background-color: #f8f9fa;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .sidebar {
+    background-color: #333333;
+    color: #ffffff;
+}
+.Menu-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+}
+.bottom .Dark-mode p{
+    color: #ffffff;
+}
+.bottom .Dark-mode :hover{
+    color: #121212;
 }
