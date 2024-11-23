@@ -160,7 +160,7 @@
 @media (max-width:600px) {
     .main-bottom input{
         flex: none;
-        width:150px;
+        width:75%;
 
     }
     .main-bottom img{
@@ -171,6 +171,13 @@
     }
     .search-box div{
         gap: 5px;
+    }
+    .cards{
+        display: block;
+
+    }
+    .card{
+        display: none;
     }
     
 }

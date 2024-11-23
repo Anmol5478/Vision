@@ -3,8 +3,15 @@ import "./main.css"
 import logo from '../../assets/vision-logo.png'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/context'
+import "../Sidebar/sidebar"
 
 const main = () => {
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent the default action (like form submission)
+      onSent(); // Call the function to handle sending the prompt
+    }
+  };
   const{onSent,recentPrompt,showResult,loading,resultData,setInput,input}= useContext(Context)
   return (
     <div className="main">
@@ -60,7 +67,7 @@ const main = () => {
 
             <div className="main-bottom">
               <div className="search-box">
-                <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Enter Prompt here' />
+                <input onChange={(e)=>setInput(e.target.value)} onKeyDown={handleKeyPress} value={input} type="text" placeholder='Enter Prompt here' />
                 <div>
                   <img src={assets.gallery_icon} alt="" />
                   <img src={assets.mic_icon} alt="" />
