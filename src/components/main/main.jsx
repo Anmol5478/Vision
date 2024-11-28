@@ -22,7 +22,7 @@ const main = () => {
         <div className="main-container">
           {!showResult?<>
             <div className="greet">
-                <p><span>Hello Anmol!</span>
+                <p><span>Hello Explorer!</span>
                 </p>
                 <p>How can i help you today?</p>
             </div>
