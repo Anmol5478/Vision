@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
+    "deepseek-sdk": "^1.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "firebase": "^11.0.2",
+    "node-fetch": "^3.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
