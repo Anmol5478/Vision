@@ -38,7 +38,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // ✅ Vite environment variable
-const GEMINI_API_KEY = 'AIzaSyBPIv2BudruvPMj-l-Wxc5VCejpar2zpGc';
+const GEMINI_API_KEY = 'AIzaSyA0h3ubnia89AcYyAG-597zG-sr13r8Ago';
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
